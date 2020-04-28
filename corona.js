@@ -84,7 +84,7 @@ function fillPlaceholders(data) {
             ],
 			 pointBackgroundColor: [
                 '#c82333 ',
-				'#ffc107',
+		'#ffc107',
                 '#218838',                
                 '#5a6268',
                 '#0069d9',
@@ -125,7 +125,7 @@ function fillPlaceholders(data) {
 	
 	
 });
-  myChart.config.data.datasets[1]['pointBackgroundColor'][0] = 'red';
+  myChart.config.data.datasets[0]['pointBackgroundColor'][0] = ''#c82333 '';
   
   Chart.Legend.prototype.afterFit = function() {
     this.height = this.height + 50;
