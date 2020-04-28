@@ -125,7 +125,7 @@ function fillPlaceholders(data) {
 	
 	
 });
-  myChart.config.data.datasets[0]['pointBackgroundColor'][0] = '#c82333 ';
+  myChart.config.data.datasets[0]['pointHoverBackgroundColor'][0] = '#c82333 ';
   
   Chart.Legend.prototype.afterFit = function() {
     this.height = this.height + 50;
