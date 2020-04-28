@@ -152,5 +152,5 @@ ready(
   }
 );
 
-//document.getElementById("arr").innerHTML=arr;
+
 
