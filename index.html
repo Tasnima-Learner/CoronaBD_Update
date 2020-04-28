@@ -7,10 +7,7 @@
     <link href="https://quarantine.country/public/assets/css/covid-19-demo.css" rel="stylesheet">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
 	<style>
-	.fullpage
-	{
-	font-size:16px;
-	}
+	
 	.chart
 	{
 	margin:10px 0;
@@ -36,7 +33,7 @@
                     </div>
                     <div class="card-body">
                         <h2 class="display-6">
-						<span class="text-muted large">Coronavirus Cases in</span>
+				<span class="text-muted small"><b>Coronavirus Cases in</b></span>
 						<span data-var-placeholder="country"> </span>
                             </h2>
                         <p class="large text-muted">LIVE UPDATE</p>
@@ -97,29 +94,27 @@
                                     
                             </div>
                             <hr />
-							<!--tested-->
-							<div class="d-inline qc_data-cases qc_data-cases-all">
+			 <!--tested-->
+			 <div class="d-inline qc_data-cases qc_data-cases-all">
                                 <button class="btn btn-primary fixwidth">
                                     <strong data-country-placeholder="tested">0</strong>
                                 </button>
                             </div>
-                            <div class="d-inline qc_data-cases qc_data-cases-text pl-1 pl-sm-2">
-                                <span class="text-muted large">  Death cases in the
-                                </span>
-                                    <span data-var-placeholder="country"></span>
-                                    
-                            </div>
-                            <hr />
-							<!--critical-->
-							<div class="d-inline qc_data-cases qc_data-cases-all">
+                        <div class="d-inline qc_data-cases qc_data-cases-text pl-1 pl-sm-2">
+                                <span class="text-muted large">  Total Tested cases in the</span>
+                                    <span data-var-placeholder="country"></span>                                    
+                         </div>
+                        <hr />
+			<!--critical-->
+			<div class="d-inline qc_data-cases qc_data-cases-all">
                                 <button class="btn btn-danger fixwidth">
                                     <strong data-country-placeholder="critical">0</strong>
                                 </button>
                             </div>
                             <div class="d-inline qc_data-cases qc_data-cases-text pl-1 pl-sm-2">
-                                </span><span class="text-muted large">Critical cases in the
+                                <span class="text-muted large">Critical cases in the
                                 </span>
-									<span data-var-placeholder="country">
+				<span data-var-placeholder="country"></span>
 									
                             </div>
                             <hr />
