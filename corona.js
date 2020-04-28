@@ -1,5 +1,6 @@
-var countryFeedKey = 'bangladesh';	//try china, spain, italy, etc.
-var countryName = 'BANGLADESH';		//try 中国, España, Italia, etc.
+var countryFeedKey = 'egypt';	//try china, spain, italy, etc.
+var countryName = 'EGYPT';		//try 中国, España, Italia, etc.
+var arra=[];// array to store value for chart
 
 function ready(cb) {
   if( document.readyState !== 'loading' ) {
@@ -51,14 +52,87 @@ function fillPlaceholders(data) {
   }
 
   var countryPlaceholderEl = document.querySelectorAll('[data-country-placeholder]');
-
+	
+	
   for(i = 0; i < countryPlaceholderEl.length; i++) {
     var placeholder = countryPlaceholderEl[i].getAttribute('data-country-placeholder');
-
+	
     if(placeholder && placeholder != '' && data['summary'][placeholder]) {
-      countryPlaceholderEl[i].innerText = parseInt(data['summary'][placeholder]).toLocaleString();
+     arra[i]=parseInt(data['summary'][placeholder]);
+	 countryPlaceholderEl[i].innerText = parseInt(data['summary'][placeholder]).toLocaleString();
+	
+	 
+	
     }
   }
+  
+ //code for chart
+ Chart.defaults.global.defaultFontSize= 16;
+  
+  var ctx = document.getElementById('myChart').getContext('2d');
+	var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Confirmed', 'Active', 'Recoverring','Deaths', 'Tested', 'Critical '],
+        datasets: [{
+            
+			label:'COVID-19 EGYPT    ',
+			data: [arra[0],arra[1],arra[2],arra[3],arra[4],arra[5]],
+			fill:false,
+			borderColor: [
+                'lightblue'
+            ],
+			 pointBackgroundColor: [
+                '#c82333 ',
+				'#ffc107',
+                '#218838',                
+                '#5a6268',
+                '#0069d9',
+                '#c82340',
+            ],
+			
+            
+            
+            borderWidth: 2,
+			pointBorderWidth:15,
+			pointRadius:6,
+			pointHoverRadius:16,
+			
+			
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true	
+                }
+            }]
+        }
+    },	
+	
+	options: {
+        legend: {
+            labels: {
+				
+                fontSize: 24
+			
+            }
+	}
+	},
+	
+	 
+	
+	
+});
+  myChart.config.data.datasets[0]['pointBackgroundColor'][0] = 'red';
+  
+  Chart.Legend.prototype.afterFit = function() {
+    this.height = this.height + 50;
+};
+
+ //code for chart END 
+  
 }
 
 ready(
@@ -77,3 +151,6 @@ ready(
     );
   }
 );
+
+//document.getElementById("arr").innerHTML=arr;
+
