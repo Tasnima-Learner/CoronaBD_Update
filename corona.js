@@ -73,7 +73,7 @@ function fillPlaceholders(data) {
 	var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: ['Confirmed', 'Active', 'Recoverring','Deaths', 'Tested', 'Critical '],
+        labels: ['Confirmed', 'Active', 'Recoverring','Deaths', 'Tested', 'Critical'],
         datasets: [{
             
 			label:'COVID-19 EGYPT    ',
@@ -125,7 +125,7 @@ function fillPlaceholders(data) {
 	
 	
 });
-  myChart.config.data.datasets[0]['pointBackgroundColor'][0] = 'red';
+  myChart.config.data.datasets[1]['pointBackgroundColor'][0] = 'red';
   
   Chart.Legend.prototype.afterFit = function() {
     this.height = this.height + 50;
